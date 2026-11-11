@@ -10,5 +10,14 @@ build:
 
 flash: build
 	avrdude -c usbasp -p m644p -U flash:w:obj/main.hex
+
+test:
+	mkdir -p obj
+	gcc -Wall -std=c99 -Iinclude test/test_config.c -o obj/test_config
+	./obj/test_config
+
 clean:
 	rm -rf obj
+
+
+.PHONY: build flash clean test
