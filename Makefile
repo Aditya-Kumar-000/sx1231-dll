@@ -15,6 +15,8 @@ test:
 	mkdir -p obj
 	gcc -Wall -std=c99 -Iinclude test/test_config.c -o obj/test_config
 	./obj/test_config
+	gcc -Wall -std=c99 -Iinclude test/test_checksum.c src/checksum.c -o obj/test_checksum
+	./obj/test_checksum
 
 clean:
 	rm -rf obj
