@@ -21,6 +21,8 @@ test:
 	./obj/test_stuff
 	gcc -Wall -std=c99 -Iinclude test/test_frame.c src/frame.c -o obj/test_frame
 	./obj/test_frame
+	gcc -Wall -std=c99 -Iinclude test/test_frag.c src/frag.c -o obj/test_frag
+	./obj/test_frag
 
 clean:
 	rm -rf obj
