@@ -28,7 +28,7 @@ int main(void)
     // (c) 30 bytes all 0x7E stuff to 60 bytes   (worst case from our standard!)
     uint8_t worst_in[30];
     uint8_t worst_out[60];
-    memset(worst_in, 0x7E, 30);
+    memset(worst_in, 0x7E, 30); // A shortcut that fills all 30 slots of worst_in with 0x7E without typing {0x7E, 0x7E, ...} 30 times.
     assert(stuff(worst_in, 30, worst_out) == 60);
 
     

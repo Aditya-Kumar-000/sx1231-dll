@@ -19,6 +19,8 @@ test:
 	./obj/test_checksum
 	gcc -Wall -std=c99 -Iinclude test/test_stuff.c src/stuff.c -o obj/test_stuff
 	./obj/test_stuff
+	gcc -Wall -std=c99 -Iinclude test/test_frame.c src/frame.c -o obj/test_frame
+	./obj/test_frame
 
 clean:
 	rm -rf obj
