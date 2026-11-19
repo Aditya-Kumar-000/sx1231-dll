@@ -17,6 +17,8 @@ test:
 	./obj/test_config
 	gcc -Wall -std=c99 -Iinclude test/test_checksum.c src/checksum.c -o obj/test_checksum
 	./obj/test_checksum
+	gcc -Wall -std=c99 -Iinclude test/test_stuff.c src/stuff.c -o obj/test_stuff
+	./obj/test_stuff
 
 clean:
 	rm -rf obj
